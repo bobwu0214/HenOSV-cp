@@ -1,8 +1,10 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
-// https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: '/henosv-cp/', 
+  base: '/HenOSV-cp/',  // 确保路径正确
+  build: {
+    outDir: 'docs',  // **这里指定输出到 docs 目录**
+  },
 })

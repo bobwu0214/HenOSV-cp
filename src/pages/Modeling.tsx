@@ -21,7 +21,7 @@ const Modeling = () => {
     };
 
     if (format === "csv") {
-      const newCsvData = [...csvData, Object.values(data).map(String)]; // ✅ 确保转换为 string[]
+      const newCsvData = [...csvData, Object.values(data).map(String)];
       setCsvData(newCsvData);
       const csv = Papa.unparse(newCsvData);
       const blob = new Blob([csv], { type: "text/csv;charset=utf-8;" });
@@ -31,6 +31,25 @@ const Modeling = () => {
       const blob = new Blob([json], { type: "application/json" });
       saveAs(blob, "model_data.json");
     }
+  };
+
+  const sendToFusion360 = () => {
+    // 构建 Fusion 360 API 兼容的参数
+    const params = {
+      length,
+      width,
+      thickness,
+      wheelDistance,
+      wheelDiameter,
+      wheelThickness,
+    };
+
+    // 生成 Fusion 360 兼容的 URL
+    const privateInfo = encodeURIComponent(JSON.stringify(params));
+    const fusionURL = `fusion360://host/?command=open&file=http%3A%2F%2Fhelp.autodesk.com%2Fcloudhelp%2FENU%2FFusion-360-API%2FExtraFiles%2FSampleGear.f3d&privateInfo=${privateInfo}`;
+
+    // 触发 Fusion 360 运行
+    window.location.href = fusionURL;
   };
 
   return (
@@ -117,12 +136,20 @@ const Modeling = () => {
             <p className="text-blue-400 text-sm">当前: {wheelDistance} mm</p>
           </div>
 
-          {/* 导出按钮 */}
-          <button onClick={() => exportData("csv")} className="w-full p-2 bg-blue-500 text-white rounded">
-            导出 CSV
-          </button>
-          <button onClick={() => exportData("json")} className="w-full p-2 bg-green-500 text-white rounded">
-            导出 JSON
+          {/* 导出按钮 - 同一行 */}
+          <div className="flex justify-between">
+            <button onClick={() => exportData("csv")} className="w-[40%] p-2 bg-blue-500 text-white rounded">
+              导出 CSV
+            </button>
+            <div className="w-[20%]"></div> {/* 空间调整 */}
+            <button onClick={() => exportData("json")} className="w-[40%] p-2 bg-green-500 text-white rounded">
+              导出 JSON
+            </button>
+          </div>
+
+          {/* 同步 Fusion 360 按钮 */}
+          <button onClick={sendToFusion360} className="w-full p-2 bg-red-500 text-white rounded mt-2">
+            同步 Fusion 360
           </button>
         </div>
 
