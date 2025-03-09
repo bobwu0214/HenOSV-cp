@@ -5,7 +5,7 @@ import Modeling from "./pages/Modeling";
 
 function App() {
   return (
-    <Router>
+    <Router basename="/HenOSV-cp">
       {/* ✅ 让 Navbar 适用于所有页面 */}
       <Navbar />
       <Routes>
