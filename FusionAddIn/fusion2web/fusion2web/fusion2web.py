@@ -19,16 +19,15 @@ _handlers = []  # event handlers
 
 
 # 处理Web事件
-class MyWebEventHandler(adsk.core.HTMLEventHandler):
+class MyOpenedFromURLHandler(adsk.core.WebRequestEventHandler):
     def __init__(self):
         super().__init__()
-    def notify(self, args):
-        try:
-
-            _ui.messageBox('MyWebEventHandler')
-
-        except:
-            _ui.messageBox('Failed:\n{}'.format(traceback.format_exc()))
+    def notify(self, args: adsk.core.WebRequestEventArgs):
+        # Code to react to the event.
+        # _ui.messageBox('OpenedFromURL event')
+        # Get the Private info
+        privateInfo = args.privateInfo
+        _ui.messageBox('Private info: {}'.format(privateInfo))
                     
             
 # 点击插件命令，打开web页面
@@ -37,7 +36,7 @@ class CommandCreatedHandler(adsk.core.CommandCreatedEventHandler):
         super().__init__()
     def notify(self, args):
         try:
-            webbrowser.open("https://bobwu0214.github.io/HenOSV-cp/modeling", 2)
+            webbrowser.open("https://bobwu0214.github.io/HenOSV-cp/", 2)
 
         except:
             futil.handle_error('CommandCreatedHandler')
@@ -58,7 +57,9 @@ def run(context):
             onCommandCreated = CommandCreatedHandler()
             createCmdDef.commandCreated.add(onCommandCreated)
             _handlers.append(onCommandCreated)
-
+        onOpenedFromURL = MyOpenedFromURLHandler()
+        _app.openedFromURL.add(onOpenedFromURL)
+        _handlers.append(onOpenedFromURL)
         # Add the command to the toolbar.
         panel = _ui.allToolbarPanels.itemById(_SOLID_CREATE_PANEL_ID)
         cntrl = panel.controls.itemById(_CREATE_CMD_ID)
