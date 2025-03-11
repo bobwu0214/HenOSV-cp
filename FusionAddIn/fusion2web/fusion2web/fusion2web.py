@@ -17,17 +17,40 @@ _HenOSV_ID = 'urn:adsk.wipprod:dm.lineage:rWyC_-l1QAGL6SsKUwtU_A'
 
 _handlers = []  # event handlers
 
+def change_palette(private_info):
+    try:
+        # 对网页传来的数据进行处理
+        content = private_info.strip('{}') # 去除首尾的{}
+        pairs = content.split(',') # 分割键值对
+        parameters_ui_list = {}
+        for pair in pairs:
+            key, value = pair.split(':')
+            parameters_ui_list[key] = int(value)
+
+        # 修改参数
+        design = _app.activeProduct
+        for parameter in parameters_ui_list:
+            parameter_value = design.userParameters.itemByName(parameter).value #检测目前参数的值
+            if parameter_value == parameters_ui_list[parameter]: # 如果值相等就跳过，不修改参数
+                # _ui.messageBox('parameter_value:{}is same'.format(parameter_value))
+                pass
+            else:  
+                design.userParameters.itemByName(parameter).expression = str(parameters_ui_list[parameter]*10)
+
+    except:
+        futil.handle_error('change_palette')
+
 
 # 处理Web事件
 class MyOpenedFromURLHandler(adsk.core.WebRequestEventHandler):
     def __init__(self):
         super().__init__()
     def notify(self, args: adsk.core.WebRequestEventArgs):
-        # Code to react to the event.
-        # _ui.messageBox('OpenedFromURL event')
         # Get the Private info
         privateInfo = args.privateInfo
-        _ui.messageBox('Private info: {}'.format(privateInfo))
+        change_palette(privateInfo) # 修改参数函数
+        
+        
                     
             
 # 点击插件命令，打开web页面
