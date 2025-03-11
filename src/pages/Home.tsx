@@ -29,7 +29,7 @@ const Home = () => {
           transition: "background 0.3s ease",
         }}
       >
-        HeⁿOSV
+        HeⁿOSV-test
       </h1>
       <p className="text-lg mt-4 text-gray-400 z-10">基于 Three.js 的参数化 3D 建模系统</p>
     </div>
