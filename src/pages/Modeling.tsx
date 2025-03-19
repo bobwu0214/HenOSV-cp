@@ -36,18 +36,17 @@ const Modeling = () => {
   const sendToFusion360 = () => {
     // 构建 Fusion 360 API 兼容的参数
     const params = {
-      length,
-      width,
-      thickness,
-      wheelDistance,
-      wheelDiameter,
-      wheelThickness,
+      Y: length,
+      X: width,
     };
+
+    {}
 
     // 生成 Fusion 360 兼容的 URL
     const privateInfo = encodeURIComponent(JSON.stringify(params));
     //const fusionURL = `fusion360://host/?command=open&file=http%3A%2F%2Fhelp.autodesk.com%2Fcloudhelp%2FENU%2FFusion-360-API%2FExtraFiles%2FSampleGear.f3d&privateInfo=${privateInfo}`;
-    const fusionURL = `fusion360://host/?command=open&file=${encodeURIComponent("https://henosv.oss-cn-hangzhou.aliyuncs.com/henosv0309v1.f3d")}&privateInfo=${privateInfo}`;
+    // &privateInfo=aa
+    const fusionURL = `fusion360://host/?command=open&file=C%3A%5CUsers%5CAtaraxia%5CDocuments%5CVscodeDOC%5CHenOSV%5CHenOSV-cp%5CFusionAddIn%5Cfusion2web%5Cfusion2web%5Cvehicle_Mtest.f3d&privateInfo=${privateInfo}`;
     // 触发 Fusion 360 运行
     window.location.href = fusionURL;
   };
@@ -61,11 +60,11 @@ const Modeling = () => {
         {/* 左上角参数调节 */}
         <div className="absolute top-16 left-4 p-4 bg-gray-900 rounded-lg shadow-lg space-y-3 z-50">
           <div>
-            <label>长度 (50-150mm):</label>
+            <label>长度 (550-750mm):</label>
             <input
               type="range"
-              min="50"
-              max="150"
+              min="550"
+              max="750"
               value={length}
               onChange={(e) => setModelParams({ length: Number(e.target.value) })}
               className="w-full"
@@ -74,11 +73,11 @@ const Modeling = () => {
           </div>
 
           <div>
-            <label>宽度 (30-80mm):</label>
+            <label>宽度 (250-350mm):</label>
             <input
               type="range"
-              min="30"
-              max="80"
+              min="250"
+              max="350"
               value={width}
               onChange={(e) => setModelParams({ width: Number(e.target.value) })}
               className="w-full"

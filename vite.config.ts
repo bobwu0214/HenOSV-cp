@@ -2,9 +2,20 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
 export default defineConfig({
+  base: '/HenOSV-cp/',
   plugins: [react()],
-  base: '/HenOSV-cp/',  // 确保路径正确
   build: {
-    outDir: 'docs',  // **这里指定输出到 docs 目录**
+    outDir: 'dist',
+    emptyOutDir: true,
+    assetsDir: 'assets',  // 明确指定资源目录
   },
+  server: {
+    proxy: {
+      '/api': {
+        target: 'https://static.jianweidata.com',
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/api/, '')
+      }
+    }
+  }
 })
