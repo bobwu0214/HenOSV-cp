@@ -7,6 +7,7 @@ export default defineConfig({
   build: {
     outDir: 'dist',
     emptyOutDir: true,
+    assetsDir: 'assets',  // 明确指定资源目录
   },
   server: {
     proxy: {
