@@ -7,5 +7,10 @@ export default defineConfig({
   build: {
     outDir: 'dist',
     emptyOutDir: true,
+  },
+  server: {
+    headers: {
+      "Content-Security-Policy": "default-src 'self'; font-src 'self' data:;"
+    }
   }
 })
