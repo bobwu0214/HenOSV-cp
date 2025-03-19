@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fusion 360 Parameters</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; background-color: #f4f4f4; }
+        h2 { text-align: center; }
+        .input-container { margin: 20px auto; max-width: 300px; }
+        .input-group { margin: 15px 0; }
+        input { width: 100%; padding: 8px; margin: 5px 0; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box; }
+        button { width: 100%; padding: 10px; background-color: #4CAF50; color: white; border: none; border-radius: 4px; cursor: pointer; }
+        button:hover { background-color: #45a049; }
+    </style>
+</head>
+<body>
+    <h2>参数输入界面</h2>
+    
+    <div class="input-container">
+        <div class="input-group">
+            <input type="number" id="param1" placeholder="请输入参数1">
+            <input type="number" id="param2" placeholder="请输入参数2">
+
+        </div>
+        <button onclick="sendParameters()">提交参数</button>
+    </div>
+
+    <script>
+        function sendParameters() {
+            if (typeof adsk === 'undefined') {
+                alert('当前未运行在Fusion 360环境中');
+                return;
+            }
+
+            const param1 = parseFloat(document.getElementById('param1').value);
+            const param2 = parseFloat(document.getElementById('param2').value);
+
+
+            const jsonData = {
+                action: "publish",
+                arguments: {
+                    parameter1: param1,
+                    parameter2: param2,
+
+                }
+            };
+
+            adsk.fusionSendData('send', JSON.stringify(jsonData));
+        }
+    </script>
+</body>
+</html>
