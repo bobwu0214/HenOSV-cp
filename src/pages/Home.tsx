@@ -31,7 +31,7 @@ const Home = () => {
       >
         HeⁿOSV-test
       </h1>
-     
+      <p className="text-lg mt-4 text-gray-400 z-10">Define your own traffic tool</p>
     </div>
   );
 };
