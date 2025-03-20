@@ -23,15 +23,16 @@ const Home = () => {
       <h1
         className="text-8xl font-bold relative z-10"
         style={{
-          background: "linear-gradient(90deg, #00ff96, #008cff, #ff007a)",
+          background: "linear-gradient(90deg, #55AF7B, #4286F3, #FAC230, #EB4537)",
           WebkitBackgroundClip: "text",
           WebkitTextFillColor: "transparent",
           transition: "background 0.3s ease",
         }}
       >
-        HeⁿOSV-test
+        Define your own traffic tool
       </h1>
-      <p className="text-lg mt-4 text-gray-400 z-10">Define your own traffic tool</p>
+      {/* 页面底部的<p className="text-lg mt-4 text-gray-400 z-10">Define your own traffic tool</p>副标题文本，用于补充说明主标题内容 */}
+      
     </div>
   );
 };
