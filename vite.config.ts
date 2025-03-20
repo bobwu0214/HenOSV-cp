@@ -5,7 +5,7 @@ export default defineConfig({
   base: '/HenOSV-cp/',
   plugins: [react()],
   build: {
-    outDir: 'dist',
+    outDir: 'docs',
     emptyOutDir: true,
     assetsDir: 'assets',  // 明确指定资源目录
   },
