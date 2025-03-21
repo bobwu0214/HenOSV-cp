@@ -76,7 +76,7 @@ export const HomePage: React.FC = () => {
 
         {/* Second Image */}
         <img
-          src="/HenOSV-cp/assets/parameter.png"
+          src="/public/assets/parameter.png"
           alt=""
           className="aspect-[6.71] object-contain object-center w-full mr-[111px] max-w-[1511px] mt-[100px]"
         />
