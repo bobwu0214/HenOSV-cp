@@ -64,7 +64,7 @@ export const HomePage: React.FC = () => {
       <div className="self-stretch flex mt-[176px] w-full px-[19px] pr-[9px] flex-col items-center">
         {/* First Image */}
         <img
-          src="/HenOSV-cp/src/assets/vehicle-design.png"
+          src="/HenOSV-cp/assets/vehicle-design.png"
           alt="Vehicle Design"
           className="w-full object-contain object-center"
         />
@@ -76,7 +76,7 @@ export const HomePage: React.FC = () => {
 
         {/* Second Image */}
         <img
-          src="/HenOSV-cp/src/assets/parameter.png"
+          src="/HenOSV-cp/assets/parameter.png"
           alt=""
           className="aspect-[6.71] object-contain object-center w-full mr-[111px] max-w-[1511px] mt-[100px]"
         />
@@ -91,8 +91,7 @@ export const HomePage: React.FC = () => {
 
         {/* Third Image */}
         <img
-          src="https://nexmaker-profabx.oss-cn-hangzhou.aliyuncs.com/img/effect.png"
-          
+          src="/HenOSV-cp/assets/effect.png"
           alt=""
           className="aspect-[1.61] object-contain object-center w-full ml-[51px] max-w-[1428px] mt-[100px]"
         />
@@ -104,7 +103,7 @@ export const HomePage: React.FC = () => {
         <div className="flex mt-[100px] w-[1225px] max-w-full">
           <img
             alt=""
-            src="/HenOSV-cp/src/assets/team.png"
+            src="/HenOSV-cp/assets/team.png"
             className="aspect-[1.75] object-contain object-center w-full"
           />
         </div>
@@ -115,7 +114,7 @@ export const HomePage: React.FC = () => {
         </h2>
         <div className="flex mt-[100px] w-[1225px] max-w-full">
           <img
-            src="/HenOSV-cp/src/assets/function.png"
+            src="/HenOSV-cp/assets/function.png"
             alt=""
             className="aspect-[1.75] object-contain object-center w-full"
           />
