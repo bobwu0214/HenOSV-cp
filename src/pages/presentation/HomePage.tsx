@@ -91,7 +91,8 @@ export const HomePage: React.FC = () => {
 
         {/* Third Image */}
         <img
-          src="/HenOSV-cp/src/assets/effect.png"
+          src="/src/assets/effect.png"
+          
           alt=""
           className="aspect-[1.61] object-contain object-center w-full ml-[51px] max-w-[1428px] mt-[100px]"
         />
