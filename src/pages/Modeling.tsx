@@ -46,7 +46,7 @@ const Modeling = () => {
     const privateInfo = encodeURIComponent(JSON.stringify(params));
     //const fusionURL = `fusion360://host/?command=open&file=http%3A%2F%2Fhelp.autodesk.com%2Fcloudhelp%2FENU%2FFusion-360-API%2FExtraFiles%2FSampleGear.f3d&privateInfo=${privateInfo}`;
     // &privateInfo=aa
-    const fusionURL = `fusion360://host/?command=open&file=C%3A%5CUsers%5CAtaraxia%5CDocuments%5CVscodeDOC%5CHenOSV%5CHenOSV-cp%5CFusionAddIn%5Cfusion2web%5Cfusion2web%5Cvehicle_Mtest.f3d&privateInfo=${privateInfo}`;
+    const fusionURL = `fusion360://host/?command=open&file=https%3A%2F%2Fgithub.com%2Fbobwu0214%2FHenOSV-cp%2Fraw%2Frefs%2Fheads%2Fmain%2FFusionAddIn%2Ffusion2web%2Ffusion2web%2Fvehicle_Mtest.f3d&privateInfo=${privateInfo}`;
     // 触发 Fusion 360 运行
     window.location.href = fusionURL;
   };
