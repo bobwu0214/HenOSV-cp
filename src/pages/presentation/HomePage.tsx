@@ -91,7 +91,7 @@ export const HomePage: React.FC = () => {
 
         {/* Third Image */}
         <img
-          src="/src/assets/effect.png"
+          src="https://nexmaker-profabx.oss-cn-hangzhou.aliyuncs.com/img/effect.png"
           
           alt=""
           className="aspect-[1.61] object-contain object-center w-full ml-[51px] max-w-[1428px] mt-[100px]"
