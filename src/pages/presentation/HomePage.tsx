@@ -6,14 +6,12 @@ export const HomePage: React.FC = () => {
       {/* Title Section */}
       <div className="relative w-[758px] max-w-full">
         <h1 className="text-white text-center font-urbanist text-6xl font-semibold leading-tight z-0">
-          如何定义一辆你自己的车
+          如何定义一辆你自己的Dream Car?
         </h1>
         <p className="text-[#999] text-center font-urbanist text-4xl font-medium z-0 mt-6">
           define your own vehicle
         </p>
-        <div className="rounded-[159.091px] border border-[#262626] bg-[#141414] absolute z-0 flex min-h-[175px] w-[175px] p-4 gap-4 overflow-hidden h-[175px] right-[-435px] top-[-66px]">
-         
-        </div>
+
       </div>
 
       {/* First Row of Specs */}
@@ -64,8 +62,8 @@ export const HomePage: React.FC = () => {
       <div className="self-stretch flex mt-[176px] w-full px-[19px] pr-[9px] flex-col items-center">
         {/* First Image */}
         <img
-          src="HenOSV-cp/public/assets/vehicle-design.png"
-          alt="Vehicle Design"
+          src="https://nexmaker-profabx.oss-cn-hangzhou.aliyuncs.com/img/vehicle-design.png"
+          alt=""
           className="w-full object-contain object-center"
         />
 
@@ -76,9 +74,9 @@ export const HomePage: React.FC = () => {
 
         {/* Second Image */}
         <img
-          src="/HenOSV-cp/public/public/assets/parameter.png"
+          src="https://nexmaker-profabx.oss-cn-hangzhou.aliyuncs.com/img/parameter.png"
           alt=""
-          className="aspect-[6.71] object-contain object-center w-full mr-[111px] max-w-[1511px] mt-[100px]"
+          className="w-full object-contain object-center"
         />
 
         {/* Display Effect Section */}
@@ -91,7 +89,7 @@ export const HomePage: React.FC = () => {
 
         {/* Third Image */}
         <img
-          src="/public/assets/effect.png"
+          src="https://nexmaker-profabx.oss-cn-hangzhou.aliyuncs.com/img/effect.png"
           alt=""
           className="aspect-[1.61] object-contain object-center w-full ml-[51px] max-w-[1428px] mt-[100px]"
         />
@@ -103,7 +101,7 @@ export const HomePage: React.FC = () => {
         <div className="flex mt-[100px] w-[1225px] max-w-full">
           <img
             alt=""
-            src="/public/assets/team.png"
+            src="https://nexmaker-profabx.oss-cn-hangzhou.aliyuncs.com/img/team.png"
             className="aspect-[1.75] object-contain object-center w-full"
           />
         </div>
@@ -114,7 +112,7 @@ export const HomePage: React.FC = () => {
         </h2>
         <div className="flex mt-[100px] w-[1225px] max-w-full">
           <img
-            src="/public/assets/function.png"
+            src="https://nexmaker-profabx.oss-cn-hangzhou.aliyuncs.com/img/function.png"
             alt=""
             className="aspect-[1.75] object-contain object-center w-full"
           />
