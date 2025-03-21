@@ -35,13 +35,15 @@ const Home = () => {
       <div className="flex gap-4 mt-8 z-10">
         <Link
           to="/modeling"
-          className="px-8 py-3 rounded-lg text-lg font-semibold text-white bg-gradient-to-r from-green-500 to-blue-500 hover:from-green-600 hover:to-blue-600 transform hover:scale-105 transition-all duration-300 inline-block"
+          className="px-8 py-3 rounded-lg text-xl font-semibold text-white border border-white hover:border-green-400 transform hover:scale-105 transition-all duration-300 inline-block"
+          style={{ fontSize: 'calc(1.3 * 1.125rem)' }}
         >
           开启
         </Link>
         <Link
           to="/docs"
-          className="px-8 py-3 rounded-lg text-lg font-semibold text-white bg-gradient-to-r from-yellow-500 to-red-500 hover:from-yellow-600 hover:to-red-600 transform hover:scale-105 transition-all duration-300 inline-block"
+          className="px-8 py-3 rounded-lg text-xl font-semibold text-white border border-white hover:border-yellow-400 transform hover:scale-105 transition-all duration-300 inline-block"
+          style={{ fontSize: 'calc(1.3 * 1.125rem)' }}
         >
           更多
         </Link>

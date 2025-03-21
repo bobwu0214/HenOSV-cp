@@ -1,5 +1,3 @@
-import React from "react";
-
 const Guide = () => {
   return (
     <div className="bg-[#141414] flex flex-col items-center pt-32 pb-80">
@@ -51,18 +49,23 @@ const Guide = () => {
           <h2 className="text-white font-urbanist text-4xl font-semibold mb-8 border-l-4 border-[#4286F3] pl-4">
             2. 比赛场地说明
           </h2>
-          <div className="flex flex-wrap justify-center gap-8 mb-10">
-            <img
-              src="https://nexmaker-profabx.oss-cn-hangzhou.aliyuncs.com/img/area1.png"
-              alt=""
-              className="aspect-[1.61] object-contain object-center w-full ml-[51px] max-w-[1428px] mt-[100px]"
-            />
-            <img
-              src="https://nexmaker-profabx.oss-cn-hangzhou.aliyuncs.com/img/area2.png"
-              alt=""
-              className="aspect-[1.61] object-contain object-center w-full ml-[51px] max-w-[1428px] mt-[100px]"
-            />
-            
+          <div className="grid grid-cols-1 gap-8 mb-10 w-full max-w-[1200px] mx-auto">
+            <div className="w-full flex justify-center">
+              <img
+                src="https://nexmaker-profabx.oss-cn-hangzhou.aliyuncs.com/img/area1.png"
+                alt="比赛场地图1"
+                className="w-full h-auto object-contain"
+                style={{ width: "100%", maxWidth: "2500px" }}
+              />
+            </div>
+            <div className="w-full flex justify-center">
+              <img
+                src="https://nexmaker-profabx.oss-cn-hangzhou.aliyuncs.com/img/area2.png"
+                alt="比赛场地图2"
+                className="w-full h-auto object-contain"
+                style={{ width: "100%", maxWidth: "2000px" }}
+              />
+            </div>
           </div>
           
           <h3 className="text-white font-urbanist text-2xl font-semibold mb-4">
