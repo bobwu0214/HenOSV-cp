@@ -6,9 +6,9 @@ const Navbar = () => {
       <div className="container mx-auto flex justify-between items-center w-full">
         <Link to="/" className="text-2xl font-bold hover:text-gray-400 text-[#4286F3]">HenOSV</Link>
         <div className="space-x-6 flex justify-end">
-
           <Link to="/" className="hover:text-gray-400 text-[#4286F3]">首页</Link>
           <Link to="/modeling" className="hover:text-gray-400 text-[#4286F3]">参数化建模</Link>
+          <Link to="/guide" className="hover:text-gray-400 text-[#4286F3]">2050-无限竞速</Link>
           <Link to="/docs" className="hover:text-gray-400 text-[#4286F3]">文档</Link>
         </div>
       </div>
