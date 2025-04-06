@@ -1,4 +1,4 @@
 ## 版本
 * v1（20250308）：threejs界面出来，输入框和进度条可以输入数据，可以实时更新模型，但装配有问题
 * v2（20250309）：轮子，轮轴装配正常；
-* v3：（20250309/508cc00）:正常部署到web，https://bobwu0214.github.io/HenOSV-cp/modeling
+* v3：（20250309/508cc00）:正常部署到web，https://bobwu0214.github.io/HenOSV-cp/modeling 0dbba8961f7fb77c361b62f0de0d823a374b25e4
