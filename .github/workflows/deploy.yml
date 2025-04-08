@@ -26,8 +26,11 @@ jobs:
       - name: Create .nojekyll file
         run: touch docs/.nojekyll
 
+      - name: Create CNAME file
+        run: echo "henosv.com" > docs/CNAME
+
       - name: Deploy to GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@v4
+        uses: peaceiris/actions-gh-pages@v3
         with:
-          branch: main
-          folder: docs
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: docs
