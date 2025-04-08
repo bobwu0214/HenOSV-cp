@@ -23,13 +23,8 @@ jobs:
       - name: Build project
         run: npm run build
 
-      - name: Verify build output
-        run: |
-          if [ ! -d "docs" ]; then
-            echo "❌ Build failed: docs directory not found"
-            ls -la
-            exit 1
-          fi
+      - name: Create .nojekyll file
+        run: touch docs/.nojekyll
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
