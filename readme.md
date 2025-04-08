@@ -1,7 +1,8 @@
 ## 版本
 * v1（20250308）：threejs界面出来，输入框和进度条可以输入数据，可以实时更新模型，但装配有问题
 * v2（20250309）：轮子，轮轴装配正常；
-* v3：（20250309/508cc00）:正常部署到web，https://bobwu0214.github.io/HenOSV-cp/modeling 0dbba8961f7fb77c361b62f0de0d823a374b25e4
+* v3：（20250309/508cc00）:正常部署到web，https://bobwu0214.github.io/HenOSV-cp/modeling 
+* v4:（20250409/2ebcaf9）：正常配置阿里云域名henosv.com，（）
 
 
 1. 在不配置阿里云域名是，使用github静态页面网址可以访问网页https://bobwu0214.github.io/HenOSV-cp/，
@@ -11,12 +12,12 @@
 www CNAME 默认 bobwu0214.github.io 10 分钟 启用
 @ CNAME 默认 bobwu0214.github.io 10 分钟 启用
 ）
-4. henosv.com通过 "检查"发现四个错误和1个警告
+1. henosv.com通过 "检查"发现四个错误和1个警告
    * failed to load resource: the server responded with a status of 404 ()
    * failed to/HenOSV-cp/assets/index-ChCfJlBf.js:1
    * Failed to load resource: the server responded with a status of 404 ()
    * Failed to load resource:index-CPFimqIs.css:1 the server responded with a status of 404 ()
-5.  是否需要 vite.config.ts 的 base 改成 '/'，原来的 'HenOSV-cp/' 这个会影响页面的打包出来的产路路径，比如，然后调整页面中 app.tsx 的 basename 和 path；
+2.  是否需要 vite.config.ts 的 base 改成 '/'，原来的 'HenOSV-cp/' 这个会影响页面的打包出来的产路路径，比如，然后调整页面中 app.tsx 的 basename 和 path；
             
             
            
