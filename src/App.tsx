@@ -7,7 +7,7 @@ import Guide from "./pages/guide";
 
 function App() {
   return (
-    <Router basename="/HenOSV-cp">
+    <Router basename="/">
       {/* ✅ 让 Navbar 适用于所有页面 */}
       <Navbar />
       <Routes>
