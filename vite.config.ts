@@ -2,12 +2,12 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
 export default defineConfig({
-  base: '/',  // 修改为 '/'
+  base: '/',
   plugins: [react()],
   build: {
-    outDir: 'docs',
+    outDir: 'docs',  // 统一设置为 docs
     emptyOutDir: true,
-    assetsDir: 'assets',  // 明确指定资源目录
+    assetsDir: 'assets',
   },
   server: {
     proxy: {
