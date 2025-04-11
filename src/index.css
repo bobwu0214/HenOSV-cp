@@ -2,6 +2,52 @@
 @tailwind components;
 @tailwind utilities;
 
+
+ #root .control-panel {
+  position: absolute;
+  top: 100px;
+  left: 10px;
+  right: auto;
+  width: 300px;
+  background-color: rgba(40, 40, 40, 0.8);
+  color: white;
+  padding: 15px;
+  border-radius: 8px;
+  font-family: Arial, sans-serif;
+  z-index: 1000;
+}
+
+.control-panel h3 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.control-item {
+  margin-bottom: 10px;
+}
+
+.control-item label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.control-input {
+  display: flex;
+  align-items: center;
+}
+
+.control-input input[type="range"] {
+  flex: 1;
+  margin-right: 10px;
+}
+
+.control-input input[type="number"] {
+  width: 60px;
+}
+
+
 /* 全局样式 */
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
@@ -30,6 +76,7 @@ a:hover {
 
 /* 修正 body 样式，确保全屏布局 */
 body, html, #root {
+  height: 100%;
   margin: 0;
   padding: 0;
   width: 100vw;
@@ -81,3 +128,5 @@ button:focus-visible {
     background-color: #1a1a1a;
   }
 }
+
+
