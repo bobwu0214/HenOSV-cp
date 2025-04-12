@@ -1,21 +1,24 @@
-import {  useState, useMemo } from 'react'
+import React, { Suspense, useState, useMemo } from 'react'
 import { Canvas } from '@react-three/fiber'
-import { OrbitControls, Grid,  } from '@react-three/drei'
-import Base from '../components/Base.jsx'
-import ChasuqiModel from '../components/chasuqimodel.jsx'
-import Fork from '../components/fork.jsx'
-import ControlPanel from '../components/ControlPanel.jsx'
-import FangzhuanglanModel from '../components/fangzhuanglan.jsx'
-import DianjiModel from '../components/dianji.jsx'
-import Zhijia from '../components/zhijia.jsx'
-import BizhenModel from '../components/bizhen.jsx'
-import Lunzu1Model from '../components/lunzu1.jsx'
-import Lunzu2Model from '../components/lunzu2.jsx'
+import { OrbitControls, Grid, useHelper } from '@react-three/drei'
+import { AxesHelper } from 'three'
+import Base from '../components/Base'
+import ChasuqiModel from '../components/chasuqimodel'
+import Fork from '../components/fork'
+import ControlPanel from '../components/ControlPanel'
+import FangzhuanglanModel from '../components/fangzhuanglan'
+import DianjiModel from '../components/dianji'
+import Zhijia from '../components/zhijia'
+import BizhenModel from '../components/bizhen'
+import Lunzu1Model from '../components/lunzu1'
+import Lunzu2Model from '../components/lunzu2'
+import Cylinder from '../components/dianjizhou'
+import ZhuanxiangModel from '../components/zhuanxiang'
+import ZhuanxiangzhouModel from '../components/zhuanxiangzhou'
 import '../index.css'
 
 
-
-export default function Modeling() {
+export default function App() {
   // 基础参数状态
   const [baseParameters, setBaseParameters] = useState({
     Y: 600,
@@ -30,6 +33,7 @@ export default function Modeling() {
   })
   
   const modelPositions = useMemo(() => {
+
     return {
       front: [0, -43, -189-(baseParameters.Y - 600)/2],
       back: [0, -43, 189+(baseParameters.Y - 600)/2],
@@ -45,8 +49,7 @@ export default function Modeling() {
         <ambientLight intensity={1} />
         <directionalLight position={[5, 5, 5]} intensity={1.5} />
         
-        
-        
+
         {/* 网格辅助 */}
         <Grid 
           args={[2000, 2000]} 
@@ -125,24 +128,24 @@ export default function Modeling() {
           scale={10}
         />
         <Lunzu1Model
-          position={[-97-(baseParameters.X-280)/2, 26, -211]}
+          position={[-97-(baseParameters.X-280)/2, 26, -211-(baseParameters.Y - 600)/2]}
           rotation={[0, -Math.PI/2, -Math.PI/2]}
           scale={10}
         />
 
         <Lunzu1Model
-          position={[97+(baseParameters.X-280)/2, 26, 211]}
+          position={[97+(baseParameters.X-280)/2, 26, 211+(baseParameters.Y - 600)/2]}
           rotation={[-Math.PI/2, Math.PI/2, 0]}
           scale={10}
         />
 
         <Lunzu2Model
-          position={[-97-(baseParameters.X-280)/2, 22, 211]}
+          position={[-97-(baseParameters.X-280)/2, 22, 211+(baseParameters.Y - 600)/2]}
           rotation={[Math.PI, -Math.PI/2, 0]}
           scale={10}
         />
         <Lunzu2Model
-          position={[97+(baseParameters.X-280)/2, 23, -211]}
+          position={[97+(baseParameters.X-280)/2, 23, -211-(baseParameters.Y - 600)/2]}
           rotation={[-Math.PI, Math.PI/2, 0]}
           scale={10}
         />
@@ -189,7 +192,61 @@ export default function Modeling() {
           scale={1}
 
         />
+
+        <Cylinder
+          length={baseParameters.X-20}
+          position={[0, 26, 212+(baseParameters.Y - 600)/2]}
+          rotation={[0, 0, Math.PI / 2]}
+
+        />
         
+        <Cylinder
+          length={baseParameters.X-20}
+          position={[0, 26, -212-(baseParameters.Y - 600)/2]}
+          rotation={[0, 0, Math.PI / 2]}
+
+        />
+
+        <ZhuanxiangModel
+          position={[0, -75, 105+(baseParameters.Y - 600)/2]}
+          rotation={[0, 0, 0]}
+          scale={10}
+        />
+
+        <ZhuanxiangModel
+          position={[0, -75, -105-(baseParameters.Y - 600)/2]}
+          rotation={[0, Math.PI, 0]}
+          scale={10}
+        />
+
+        
+        <ZhuanxiangzhouModel
+          length={80+(baseParameters.X - 150)/2-65}
+          position={[25, 15, 180+(baseParameters.Y - 600)/2]}
+          rotation={[0, 0, Math.PI/2]}
+
+        />
+
+        <ZhuanxiangzhouModel
+          length={80+(baseParameters.X - 150)/2-65}
+          position={[25, 15, -180-(baseParameters.Y - 600)/2]}
+          rotation={[0, 0, Math.PI/2]}
+
+        />
+
+
+        <ZhuanxiangzhouModel
+          length={-80-(baseParameters.X - 150)/2+65}
+          position={[-25, 18, -180-(baseParameters.Y - 600)/2]}
+          rotation={[0, 0, Math.PI/2]}
+          />
+        <ZhuanxiangzhouModel
+          length={-80-(baseParameters.X - 150)/2+65}
+          position={[-25, 15, 180+(baseParameters.Y - 600)/2]}
+          rotation={[0, 0, Math.PI/2]}
+          />
+
+
         <OrbitControls />
       </Canvas>
       

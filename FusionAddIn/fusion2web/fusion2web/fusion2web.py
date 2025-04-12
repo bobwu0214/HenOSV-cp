@@ -63,7 +63,7 @@ class CommandCreatedHandler(adsk.core.CommandCreatedEventHandler):
         super().__init__()
     def notify(self, args):
         try:
-            webbrowser.open("https://bobwu0214.github.io/HenOSV-cp/", 2)
+            webbrowser.open("http://localhost:5173", 2)
 
         except:
             futil.handle_error('CommandCreatedHandler')
