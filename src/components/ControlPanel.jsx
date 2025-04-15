@@ -40,16 +40,16 @@ export default function ControlPanel({ parameters, setParameters }) {
         <div className="control-input">
           <input
             type="range"
-            min={500}
-            max={1000}
+            min={530}
+            max={730}
             step={1}
             value={parameters.Y}
             onChange={(e) => handleChange('Y', e.target.value)}
           />
           <input
             type="number"
-            min={500}
-            max={1000}
+            min={530}
+            max={730}
             value={parameters.Y}
             onChange={(e) => handleChange('Y', e.target.value)}
           />
@@ -62,16 +62,16 @@ export default function ControlPanel({ parameters, setParameters }) {
         <div className="control-input">
           <input
             type="range"
-            min={200}
-            max={500}
+            min={240}
+            max={400}
             step={1}
             value={parameters.Base_W1}
             onChange={(e) => handleChange('Base_W1', e.target.value)}
           />
           <input
             type="number"
-            min={200}
-            max={500}
+            min={240}
+            max={400}
             value={parameters.Base_W1}
             onChange={(e) => handleChange('Base_W1', e.target.value)}
           />
@@ -83,16 +83,16 @@ export default function ControlPanel({ parameters, setParameters }) {
         <div className="control-input">
           <input
             type="range"
-            min={200}
-            max={500}
+            min={250}
+            max={400}
             step={1}
             value={parameters.X}
             onChange={(e) => handleChange('X', e.target.value)}
           />
           <input
             type="number"
-            min={200}
-            max={500}
+            min={250}
+            max={400}
             value={parameters.X}
             onChange={(e) => handleChange('X', e.target.value)}
           />
