@@ -10,7 +10,7 @@ export default function BizhenModel({
   const groupRef = useRef()
   
   // 加载模型
-  const { scene } = useGLTF('/HenOSV-cp/models/bizhen.glb')
+  const { scene } = useGLTF('/models/bizhen.glb')
   
   // 处理模型材质和边缘
   useEffect(() => {
