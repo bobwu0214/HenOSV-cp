@@ -10,7 +10,7 @@ export default function DianjiModel({
   const groupRef = useRef()
   
   // 加载模型
-  const { scene } = useGLTF('/models/dianji.glb')
+  const { scene } = useGLTF('/HenOSV-cp/models/dianji.glb')
   
   // 处理模型材质和边缘
   useEffect(() => {
@@ -65,4 +65,4 @@ export default function DianjiModel({
 }
 
 // 预加载模型，提高性能
-useGLTF.preload('/models/dianji.glb')
+useGLTF.preload('/HenOSV-cp/models/dianji.glb')
