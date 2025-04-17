@@ -36,7 +36,7 @@ export default function ControlPanel({ parameters, setParameters }) {
       
       {/* 总长度 (Y) 参数控制 */}
       <div className="control-item">
-        <label>总长度 (Y)</label>
+        <label>总长度</label>
         <div className="control-input">
           <input
             type="range"
@@ -58,7 +58,7 @@ export default function ControlPanel({ parameters, setParameters }) {
       
       {/* 宽度 (Base_W1) 参数控制 */}
       <div className="control-item">
-        <label>载物台宽度 (Base_W1)</label>
+        <label>载物台宽度</label>
         <div className="control-input">
           <input
             type="range"
@@ -79,7 +79,7 @@ export default function ControlPanel({ parameters, setParameters }) {
       </div>
       
       <div className="control-item">
-        <label>前后桥宽度(X)</label>
+        <label>前后桥宽度</label>
         <div className="control-input">
           <input
             type="range"
@@ -100,7 +100,7 @@ export default function ControlPanel({ parameters, setParameters }) {
       </div>
 
       <div className="control-item">
-        <label>电机轴长度(Base_L5)</label>
+        <label>电机轴长度</label>
         <div className="control-input">
           <input
             type="range"

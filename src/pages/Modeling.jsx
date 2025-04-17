@@ -15,6 +15,7 @@ import Lunzu2Model from '../components/lunzu2'
 import Cylinder from '../components/dianjizhou'
 import ZhuanxiangModel from '../components/zhuanxiang'
 import ZhuanxiangzhouModel from '../components/zhuanxiangzhou'
+import Dianyuan from '../components/dianyuan'
 import '../index.css'
 
 
@@ -68,6 +69,12 @@ export default function App() {
           {...baseParameters} 
         />
         
+        <Dianyuan
+          position={[0, 25, 0]}
+          rotation={[0, 0, 0]}
+          scale={1}
+        />
+
         <ChasuqiModel 
           position={modelPositions.front}
           rotation={[-Math.PI / 2, 0, 0]}
@@ -93,13 +100,13 @@ export default function App() {
         />
 
         <DianjiModel
-          position={[0, 2, baseParameters.Base_L5+45+(baseParameters.Y - 600)/2]}
+          position={[0, 2, -baseParameters.Base_L5+185+(baseParameters.Y - 600)/2]}
           rotation={[0, 0, 0]}
           scale={10}
         />
 
         <DianjiModel
-          position={[0, 2, -baseParameters.Base_L5-45-(baseParameters.Y - 600)/2]}
+          position={[0, 2, baseParameters.Base_L5-185-(baseParameters.Y - 600)/2]}
           rotation={[0, Math.PI, 0]}
           scale={10}
         />
