@@ -10,7 +10,7 @@ export default function ChasuqiModel({
   const groupRef = useRef()
   
   // 加载模型
-  const { scene } = useGLTF('/HenOSV-cp/models/chasuqi.glb')
+  const { scene } = useGLTF('/models/chasuqi.glb')
   
   // 处理模型材质和边缘
   useEffect(() => {
@@ -66,4 +66,4 @@ export default function ChasuqiModel({
 }
 
 // 预加载模型，提高性能
-useGLTF.preload('/HenOSV-cp/models/chasuqi.glb')
+useGLTF.preload('/models/chasuqi.glb')

@@ -10,7 +10,7 @@ export default function FangzhuanglanModel({
   const groupRef = useRef()
   
   // 加载模型
-  const { scene } = useGLTF('/HenOSV-cp/models/fangzhuanglan.glb')
+  const { scene } = useGLTF('/models/fangzhuanglan.glb')
   
   // 处理模型材质和边缘
   useEffect(() => {
@@ -65,4 +65,4 @@ export default function FangzhuanglanModel({
 }
 
 // 预加载模型，提高性能
-useGLTF.preload('/HenOSV-cp/models/fangzhuanglan.glb')
+useGLTF.preload('/models/fangzhuanglan.glb')

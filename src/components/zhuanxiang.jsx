@@ -10,7 +10,7 @@ export default function ZhuanxiangModel({
   const groupRef = useRef()
   
   // 加载模型
-  const { scene } = useGLTF('/HenOSV-cp/models/zhuanxiang.glb')
+  const { scene } = useGLTF('/models/zhuanxiang.glb')
   
   // 处理模型材质和边缘
   useEffect(() => {
@@ -65,4 +65,4 @@ export default function ZhuanxiangModel({
 }
 
 // 预加载模型，提高性能
-useGLTF.preload('/HenOSV-cp/models/zhuanxiang.glb')
+useGLTF.preload('/models/zhuanxiang.glb')

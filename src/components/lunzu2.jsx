@@ -10,7 +10,7 @@ export default function Lunzu2Model({
   const groupRef = useRef()
   
   // 加载模型
-  const { scene } = useGLTF('/HenOSV-cp/models/lunzu2.glb')
+  const { scene } = useGLTF('/models/lunzu2.glb')
   
   // 处理模型材质和边缘
   useEffect(() => {
@@ -65,4 +65,4 @@ export default function Lunzu2Model({
 }
 
 // 预加载模型，提高性能
-useGLTF.preload('/HenOSV-cp/models/lunzu2.glb')
+useGLTF.preload('/models/lunzu2.glb')
