@@ -16,6 +16,7 @@ import Cylinder from '../components/dianjizhou'
 import ZhuanxiangModel from '../components/zhuanxiang'
 import ZhuanxiangzhouModel from '../components/zhuanxiangzhou'
 import Dianyuan from '../components/dianyuan'
+import Tire from '../components/lunzi'
 import '../index.css'
 
 
@@ -135,26 +136,50 @@ export default function App() {
           scale={10}
         />
         <Lunzu1Model
-          position={[-97-(baseParameters.X-280)/2, 26, -211-(baseParameters.Y - 600)/2]}
-          rotation={[0, -Math.PI/2, -Math.PI/2]}
+          position={[-167-(baseParameters.X-280)/2, 115, 117-(baseParameters.Y - 600)/2]}
+          rotation={[0, Math.PI, 0]}
           scale={10}
+        />
+
+        <Tire
+          position={[-137-(baseParameters.X-280)/2, 26, -211-(baseParameters.Y - 600)/2]}
+          rotation={[0, Math.PI/2, Math.PI/2]}
+          scale={1}
         />
 
         <Lunzu1Model
-          position={[97+(baseParameters.X-280)/2, 26, 211+(baseParameters.Y - 600)/2]}
-          rotation={[-Math.PI/2, Math.PI/2, 0]}
+          position={[167+(baseParameters.X-280)/2, 115, -117+(baseParameters.Y - 600)/2]}
+          rotation={[0, 0, 0]}
           scale={10}
         />
 
+        <Tire
+          position={[137+(baseParameters.X-280)/2, 26, -211-(baseParameters.Y - 600)/2]}
+          rotation={[0, Math.PI/2, Math.PI/2]}
+          scale={1}
+        />
+
+        <Tire
+          position={[-137-(baseParameters.X-280)/2, 26, 211+(baseParameters.Y - 600)/2]}
+          rotation={[0, Math.PI/2, Math.PI/2]}
+          scale={1}
+        />
+
         <Lunzu2Model
-          position={[-97-(baseParameters.X-280)/2, 22, 211+(baseParameters.Y - 600)/2]}
-          rotation={[Math.PI, -Math.PI/2, 0]}
+          position={[+167+(baseParameters.X-280)/2, 115, 117-(baseParameters.Y - 600)/2]}
+          rotation={[0, 0, 0]}
           scale={10}
         />
         <Lunzu2Model
-          position={[97+(baseParameters.X-280)/2, 23, -211-(baseParameters.Y - 600)/2]}
-          rotation={[-Math.PI, Math.PI/2, 0]}
+          position={[-167-(baseParameters.X-280)/2, 115, -117+(baseParameters.Y - 600)/2]}
+          rotation={[0, Math.PI, 0]}
           scale={10}
+        />
+
+        <Tire
+          position={[137+(baseParameters.X-280)/2, 26, 211+(baseParameters.Y - 600)/2]}
+          rotation={[0, Math.PI/2, Math.PI/2]}
+          scale={1}
         />
 
 
