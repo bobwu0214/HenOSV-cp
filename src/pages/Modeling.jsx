@@ -17,6 +17,7 @@ import ZhuanxiangModel from '../components/zhuanxiang'
 import ZhuanxiangzhouModel from '../components/zhuanxiangzhou'
 import Dianyuan from '../components/dianyuan'
 import Tire from '../components/lunzi'
+import Dangban from '../components/fangzhuangjia'
 import '../index.css'
 
 
@@ -32,6 +33,11 @@ export default function App() {
     Base_TH1: 3,
     X: 280,
     Base_L5: 70,
+    outerRadius: 50,
+    innerRadius: 35,
+    dangbankuandu: 150,
+    dangbanhoudu: 50,
+    weight:5,
   })
   
   const modelPositions = useMemo(() => {
@@ -45,7 +51,7 @@ export default function App() {
   return (
     <>
       <Canvas
-        camera={{ position: [-200, 300, 300], fov: 55 }}
+        camera={{ position: [-300, 550, 450], fov: 45, near: 0.1, far: 10000 }}
         style={{ width: '100vw', height: '100vh' }}
       >
         <ambientLight intensity={1} />
@@ -62,7 +68,7 @@ export default function App() {
           sectionSize={200}
           sectionThickness={1}
           sectionColor="#9d4b4b"
-          fadeDistance={2000}
+          fadeDistance={5000}
         />
         
         <Base 
@@ -88,16 +94,20 @@ export default function App() {
           scale={10} 
         />
 
-        <FangzhuanglanModel 
-          position={[0, 0, 250+(baseParameters.Y - 600)/2]}
-          rotation={[0, 0, 0]}
-          scale={10} 
-        />
 
-        <FangzhuanglanModel 
-          position={[0, 0, -250-(baseParameters.Y - 600)/2]}
-          rotation={[Math.PI, 0, Math.PI]}
-          scale={10} 
+        <Dangban
+          position={[0, 5, 240+(baseParameters.Y - 600)/2]}
+          rotation={[Math.PI / 2, 0, 0]}
+          scale={1}
+          dangbankuandu={baseParameters.dangbankuandu}
+          dangbanhoudu={baseParameters.dangbanhoudu}
+        />
+        <Dangban
+          position={[0, 5, -240-(baseParameters.Y - 600)/2]}
+          rotation={[Math.PI / 2, 0, Math.PI]}
+          scale={1}
+          dangbankuandu={baseParameters.dangbankuandu}
+          dangbanhoudu={baseParameters.dangbanhoudu}
         />
 
         <DianjiModel
@@ -145,6 +155,8 @@ export default function App() {
           position={[-137-(baseParameters.X-280)/2, 26, -211-(baseParameters.Y - 600)/2]}
           rotation={[0, Math.PI/2, Math.PI/2]}
           scale={1}
+          outerRadius={baseParameters.outerRadius}
+          innerRadius={baseParameters.innerRadius}
         />
 
         <Lunzu1Model
@@ -157,12 +169,16 @@ export default function App() {
           position={[137+(baseParameters.X-280)/2, 26, -211-(baseParameters.Y - 600)/2]}
           rotation={[0, Math.PI/2, Math.PI/2]}
           scale={1}
+          outerRadius={baseParameters.outerRadius}
+          innerRadius={baseParameters.innerRadius}
         />
 
         <Tire
           position={[-137-(baseParameters.X-280)/2, 26, 211+(baseParameters.Y - 600)/2]}
           rotation={[0, Math.PI/2, Math.PI/2]}
           scale={1}
+          outerRadius={baseParameters.outerRadius}
+          innerRadius={baseParameters.innerRadius}
         />
 
         <Lunzu2Model
@@ -180,6 +196,8 @@ export default function App() {
           position={[137+(baseParameters.X-280)/2, 26, 211+(baseParameters.Y - 600)/2]}
           rotation={[0, Math.PI/2, Math.PI/2]}
           scale={1}
+          outerRadius={baseParameters.outerRadius}
+          innerRadius={baseParameters.innerRadius}
         />
 
 

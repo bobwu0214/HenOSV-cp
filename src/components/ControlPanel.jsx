@@ -118,6 +118,112 @@ export default function ControlPanel({ parameters, setParameters }) {
             onChange={(e) => handleChange('Base_L5', e.target.value)}
           />
         </div>
+      </div>
+      
+      <div className="control-item">
+        <label>轮胎直径</label>
+        <div className="control-input">
+          <input
+            type="range"
+            min={40}
+            max={60}
+            step={1}
+            value={parameters.outerRadius}
+            onChange={(e) => handleChange('outerRadius', e.target.value)}
+          />
+          <input
+            type="number"
+            min={40}
+            max={60}
+            value={parameters.outerRadius}
+            onChange={(e) => handleChange('outerRadius', e.target.value)}
+          />
+        </div>
+      </div>
+
+      <div className="control-item">
+        <label>轮毂直径</label>
+        <div className="control-input">
+          <input
+            type="range"
+            min={30}
+            max={40}
+            step={1}
+            value={parameters.innerRadius}
+            onChange={(e) => handleChange('innerRadius', e.target.value)}
+          />
+          <input
+            type="number"
+            min={30}
+            max={40}
+            value={parameters.innerRadius}
+            onChange={(e) => handleChange('innerRadius', e.target.value)}
+          />
+        </div>
+      </div>
+
+      <div className="control-item">
+        <label>挡板宽度</label>
+        <div className="control-input">
+          <input
+            type="range"
+            min={140}
+            max={280}
+            step={1}
+            value={parameters.dangbankuandu}
+            onChange={(e) => handleChange('dangbankuandu', e.target.value)}
+          />
+          <input
+            type="number"
+            min={140}
+            max={280}
+            value={parameters.dangbankuandu}
+            onChange={(e) => handleChange('dangbankuandu', e.target.value)}
+          />
+        </div>
+      </div>
+
+      <div className="control-item">
+        <label>挡板厚度</label>
+        <div className="control-input">
+          <input
+            type="range"
+            min={40}
+            max={60}
+            step={1}
+            value={parameters.dangbanhoudu}
+            onChange={(e) => handleChange('dangbanhoudu', e.target.value)}
+          />
+          <input
+            type="number"
+            min={40}
+            max={60}
+            value={parameters.dangbanhoudu}
+            onChange={(e) => handleChange('dangbanhoudu', e.target.value)}
+          />
+        </div>
+      </div>
+
+      <div className="control-item">
+        <label>载重量</label>
+        <div className="control-input">
+          <input
+            type="range"
+            min={0}
+            max={10}
+            step={1}
+            value={parameters.weight}
+            onChange={(e) => handleChange('weight', e.target.value)}
+          />
+          <input
+            type="number"
+            min={0}
+            max={10}
+            value={parameters.weight}
+            onChange={(e) => handleChange('weight', e.target.value)}
+          />
+        </div>
+      </div>
 
         <div className="export-button-container">
           <button className="export-button" onClick={handleExportToFusion}>
@@ -126,6 +232,5 @@ export default function ControlPanel({ parameters, setParameters }) {
         </div>
       </div>
 
-    </div>
   )
 }
