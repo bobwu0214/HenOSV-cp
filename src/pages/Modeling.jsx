@@ -19,6 +19,7 @@ import Dianyuan from '../components/dianyuan'
 import Tire from '../components/lunzi'
 import Dangban from '../components/fangzhuangjia'
 import '../index.css'
+import { depth } from 'three/tsl'
 
 
 export default function App() {
@@ -38,6 +39,7 @@ export default function App() {
     dangbankuandu: 150,
     dangbanhoudu: 50,
     weight:5,
+    depth: 55,
   })
   
   const modelPositions = useMemo(() => {
@@ -67,7 +69,7 @@ export default function App() {
           cellColor="#6f6f6f"
           sectionSize={200}
           sectionThickness={1}
-          sectionColor="#9d4b4b"
+          sectionColor="#0000ff"
           fadeDistance={5000}
         />
         
@@ -157,6 +159,7 @@ export default function App() {
           scale={1}
           outerRadius={baseParameters.outerRadius}
           innerRadius={baseParameters.innerRadius}
+          depth={baseParameters.depth}
         />
 
         <Lunzu1Model
@@ -171,6 +174,7 @@ export default function App() {
           scale={1}
           outerRadius={baseParameters.outerRadius}
           innerRadius={baseParameters.innerRadius}
+          depth={baseParameters.depth}
         />
 
         <Tire
@@ -179,6 +183,7 @@ export default function App() {
           scale={1}
           outerRadius={baseParameters.outerRadius}
           innerRadius={baseParameters.innerRadius}
+          depth={baseParameters.depth}
         />
 
         <Lunzu2Model
@@ -198,6 +203,7 @@ export default function App() {
           scale={1}
           outerRadius={baseParameters.outerRadius}
           innerRadius={baseParameters.innerRadius}
+          depth={baseParameters.depth}
         />
 
 

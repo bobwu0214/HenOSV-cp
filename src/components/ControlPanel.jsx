@@ -11,6 +11,41 @@ export default function ControlPanel({ parameters, setParameters }) {
 
   // 处理输出到Fusion的功能
   const handleExportToFusion = () => {
+    // 新增输出参数功能
+    const headers = ['参数名', '参数值'];
+    // 构建CSV内容行
+    const rows = Object.entries(parameters).map(([key, value]) => 
+      // 简单处理，假设参数名和值不包含逗号或换行符
+      `${key},${value}` 
+    );
+
+    // 将表头和内容行合并，用换行符分隔
+    const csvContent = [
+      headers.join(','), // 表头行
+      ...rows             // 内容行
+    ].join('\n');
+
+    // 创建 Blob 对象
+    // 添加 BOM (Byte Order Mark) 以确保 Excel 正确识别 UTF-8 编码，避免中文乱码
+    const blob = new Blob(['\uFEFF' + csvContent], { type: 'text/csv;charset=utf-8;' });
+
+    // 创建下载链接
+    const link = document.createElement('a');
+    if (link.download !== undefined) { // 检测浏览器是否支持 download 属性
+      const url = URL.createObjectURL(blob);
+      link.setAttribute('href', url);
+      link.setAttribute('download', 'parameters.csv'); // 设置下载文件名
+      link.style.visibility = 'hidden';
+      document.body.appendChild(link);
+      link.click(); // 模拟点击下载
+      document.body.removeChild(link); // 移除元素
+      URL.revokeObjectURL(url); // 释放 URL 对象
+    } else {
+      // 对于不支持 download 属性的旧浏览器（非常少见）
+      console.error("浏览器不支持自动下载功能。");
+      // 可以考虑提供一个链接让用户右键另存为，或者直接在控制台输出CSV内容
+      console.log("CSV 内容:\n", csvContent);
+    }
     // 确保捕获所有控制面板中的参数
     const requiredParams = ['Y', 'Base_W1', 'X', 'Base_L5'];
     
@@ -104,16 +139,16 @@ export default function ControlPanel({ parameters, setParameters }) {
         <div className="control-input">
           <input
             type="range"
-            min={60}
-            max={80}
+            min={63}
+            max={70}
             step={1}
             value={parameters.Base_L5}
             onChange={(e) => handleChange('Base_L5', e.target.value)}
           />
           <input
             type="number"
-            min={60}
-            max={80}
+            min={63}
+            max={70}
             value={parameters.Base_L5}
             onChange={(e) => handleChange('Base_L5', e.target.value)}
           />
@@ -158,6 +193,27 @@ export default function ControlPanel({ parameters, setParameters }) {
             max={40}
             value={parameters.innerRadius}
             onChange={(e) => handleChange('innerRadius', e.target.value)}
+          />
+        </div>
+      </div>
+
+      <div className="control-item">
+        <label>轮胎厚度</label>
+        <div className="control-input">
+          <input
+            type="range"
+            min={40}
+            max={70}
+            step={1}
+            value={parameters.depth}
+            onChange={(e) => handleChange('depth', e.target.value)}
+          />
+          <input
+            type="number"
+            min={40}
+            max={70}
+            value={parameters.depth}
+            onChange={(e) => handleChange('depth', e.target.value)}
           />
         </div>
       </div>
