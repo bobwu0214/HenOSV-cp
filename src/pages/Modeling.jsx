@@ -25,6 +25,7 @@ import { depth } from 'three/tsl'
 export default function App() {
   // 基础参数状态
   const [baseParameters, setBaseParameters] = useState({
+    username:"",
     Y: 600,
     Bumper_W1: 50,
     Base_W2: 50,

@@ -3,9 +3,11 @@ import './ControlPanel.css'
 export default function ControlPanel({ parameters, setParameters }) {
   // 处理参数变化
   const handleChange = (param, value) => {
+    // 检查参数名，如果是 'username'，则不转换为数字
+    const newValue = param === 'username' ? value : Number(value);
     setParameters(prev => ({
       ...prev,
-      [param]: Number(value)
+      [param]: newValue
     }))
   }
 
@@ -68,7 +70,18 @@ export default function ControlPanel({ parameters, setParameters }) {
   return (
     <div className="control-panel">
       <h3>参数控制面板</h3>
-      
+      <div className="control-item">
+        <label>用户名</label>
+        <div className="control-input">
+          <input
+            type="text"
+            value={parameters.username || ''} // 使用 parameters.username，如果不存在则默认为空字符串
+            onChange={(e) => handleChange('username', e.target.value)}
+            placeholder="请输入用户名" // 添加占位符提示
+            style={{ width: '100%' }} // 让输入框宽度适应容器
+          />
+        </div>
+      </div>
       {/* 总长度 (Y) 参数控制 */}
       <div className="control-item">
         <label>总长度</label>
