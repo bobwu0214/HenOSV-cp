@@ -10,6 +10,7 @@ const Navbar = () => {
           <Link to="/modeling" className="hover:text-gray-400 text-[#4286F3]">参数化建模</Link>
           <Link to="/guide" className="hover:text-gray-400 text-[#4286F3]">2050-无限竞速</Link>
           <Link to="/docs" className="hover:text-gray-400 text-[#4286F3]">文档</Link>
+          <Link to="https://profabx.com/prototype/" className="hover:text-gray-400 text-[#4286F3]">数字加工</Link>
         </div>
       </div>
     </nav>
