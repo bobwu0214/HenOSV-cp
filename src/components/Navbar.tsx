@@ -11,6 +11,8 @@ const Navbar = () => {
           <Link to="/guide" className="hover:text-gray-400 text-[#4286F3]">2050-无限竞速</Link>
           <Link to="/docs" className="hover:text-gray-400 text-[#4286F3]">文档</Link>
           <Link to="https://profabx.com/prototype/" className="hover:text-gray-400 text-[#4286F3]">数字加工</Link>
+          {/* <Link to="https://ataraxia-msj.github.io/jishiqi/" className="hover:text-gray-400 text-[#4286F3]">比赛计时</Link> */}
+          <a href="https://ataraxia-msj.github.io/jishiqi/" target="_blank" rel="noopener noreferrer" className="hover:text-gray-400 text-[#4286F3]">比赛计时</a>
         </div>
       </div>
     </nav>
