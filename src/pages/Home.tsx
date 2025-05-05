@@ -13,43 +13,36 @@ const Home = () => {
   }, []);
 
   return (
-    <div className="w-screen h-screen flex flex-col items-center justify-center bg-black text-white relative overflow-hidden">
-      <div
-        className="absolute inset-0 pointer-events-none"
-        style={{
-          background: `radial-gradient(circle at ${mousePosition.x}px ${mousePosition.y}px, rgba(0, 255, 150, 0.4), transparent 50%)`,
-          mixBlendMode: "overlay",
-        }}
-      />
-      <h1
-        className="text-8xl font-bold relative z-10 hover:scale-110 transition-transform duration-300"
-        style={{
-          background: "linear-gradient(90deg, #55AF7B, #4286F3, #FAC230, #EB4537)",
-          WebkitBackgroundClip: "text",
-          WebkitTextFillColor: "transparent",
-          transition: "background 0.3s ease, transform 0.3s ease",
-        }}
-      >
-        Define your own traffic tool
-      </h1>
-      <div className="flex gap-4 mt-8 z-10">
-        <Link
-          to="/modeling"
-          className="px-8 py-3 rounded-lg text-xl font-semibold text-white border border-white hover:border-green-400 transform hover:scale-105 transition-all duration-300 inline-block"
-          style={{ fontSize: 'calc(1.3 * 1.125rem)' }}
-        >
-          开启
-        </Link>
-        <Link
-          to="/docs"
-          className="px-8 py-3 rounded-lg text-xl font-semibold text-white border border-white hover:border-yellow-400 transform hover:scale-105 transition-all duration-300 inline-block"
-          style={{ fontSize: 'calc(1.3 * 1.125rem)' }}
-        >
-          更多
-        </Link>
+    <div className="w-full min-h-screen bg-black text-white">
+      <div className="container mx-auto px-4 w-full">
+        {/* 标题部分 */}
+        <div className="w-full text-center mt-[200px]">
+          <h1 className="text-6xl font-bold">
+            <span className="text-green-500">Define</span>{" "}
+            <span className="text-blue-500">your</span>{" "}
+            <span className="text-gray-300">own</span>{" "}
+            <span className="text-yellow-500">transport</span>
+          </h1>
+        </div>
+        <div className="flex gap-4 mt-8 z-10">
+          <Link
+            to="/modeling"
+            className="px-8 py-3 rounded-lg text-xl font-semibold text-white border border-white hover:border-green-400 transform hover:scale-105 transition-all duration-300 inline-block"
+            style={{ fontSize: 'calc(1.3 * 1.125rem)' }}
+          >
+            开启
+          </Link>
+          <Link
+            to="/docs"
+            className="px-8 py-3 rounded-lg text-xl font-semibold text-white border border-white hover:border-yellow-400 transform hover:scale-105 transition-all duration-300 inline-block"
+            style={{ fontSize: 'calc(1.3 * 1.125rem)' }}
+          >
+            更多
+          </Link>
+        </div>
+        {/* 页面底部的<p className="text-lg mt-4 text-gray-400 z-10">Define your own traffic tool</p>副标题文本，用于补充说明主标题内容 */}
+        
       </div>
-      {/* 页面底部的<p className="text-lg mt-4 text-gray-400 z-10">Define your own traffic tool</p>副标题文本，用于补充说明主标题内容 */}
-      
     </div>
   );
 };

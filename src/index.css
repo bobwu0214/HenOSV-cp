@@ -75,7 +75,19 @@ a:hover {
 }
 
 /* 修正 body 样式，确保全屏布局 */
-body, html, #root {
+body, html {
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
+
   height: 100%;
   margin: 0;
   padding: 0;

@@ -15,16 +15,18 @@ function App() {
     <Router >
       {/* ✅ 让 Navbar 适用于所有页面 */}
       <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/modeling" element={<Modeling />} />
-        <Route path="/guide" element={<Guide />} />
-        <Route path="/docs" element={<Docs />} />
-        <Route path="/kit" element={<Kit />} />
-        <Route path="/henosv" element={<HenOSV />} />
-        <Route path="/simulator" element={<Simulator />} />
-        <Route path="/simulatorlab" element={<SimulatorLab />} />
-      </Routes>
+      <div className="w-full overflow-x-hidden"> {/* 添加这个包装div */}
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/modeling" element={<Modeling />} />
+          <Route path="/guide" element={<Guide />} />
+          <Route path="/docs" element={<Docs />} />
+          <Route path="/kit" element={<Kit />} />
+          <Route path="/henosv" element={<HenOSV />} />
+          <Route path="/simulator" element={<Simulator />} />
+          <Route path="/simulatorlab" element={<SimulatorLab />} />
+        </Routes>
+      </div>
     </Router>
   );
 }
