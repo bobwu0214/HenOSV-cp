@@ -7,7 +7,7 @@ const SimulatorResearchSection: React.FC = () => {
         <p className="text-lg leading-relaxed">
           使用交通工具模拟器做无人驾驶、人机交互相关的科研探索。
         </p>
-        <div className="grid md:grid-cols-3 gap-6 mt-4">
+        <div className="flex flex-col gap-6 mt-4">
           <img
             src="https://nexmaker-profabx.oss-cn-hangzhou.aliyuncs.com/img/WX20250506-002902%402x.png"
             alt="模拟器研究图1"

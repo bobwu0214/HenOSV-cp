@@ -14,17 +14,17 @@ const Home = () => {
 
   return (
     <div className="w-full min-h-screen bg-black text-white">
-      <div className="container mx-auto px-4 w-full">
+      <div className="container mx-auto px-4 w-full flex flex-col items-center justify-center">
         {/* 标题部分 */}
         <div className="w-full text-center mt-[200px]">
           <h1 className="text-6xl font-bold">
             <span className="text-green-500">Define</span>{" "}
             <span className="text-blue-500">your</span>{" "}
             <span className="text-gray-300">own</span>{" "}
-            <span className="text-yellow-500">transport</span>
+            <span className="text-yellow-500">traffic</span>
           </h1>
         </div>
-        <div className="flex gap-4 mt-8 z-10">
+        <div className="flex gap-4 mt-8 z-10 justify-center">
           <Link
             to="/modeling"
             className="px-8 py-3 rounded-lg text-xl font-semibold text-white border border-white hover:border-green-400 transform hover:scale-105 transition-all duration-300 inline-block"
