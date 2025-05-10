@@ -25,13 +25,16 @@ const AboutUs = () => {
       <div className="space-y-6">
         <div>
           <h6 className="font-bold">第一阶段：从创客社区到知识共享</h6>
+          <h6 className="font-bold"><a href="https://www.nexmaker.com/" >第一阶段：从创客社区到知识共享</a></h6>
+         
           <p>
             在 ProFabX 之前，我们在进行硬件创新时遇到了许多挑战...建立了一个 共享知识、探索新技术 的圈子。
           </p>
         </div>
 
         <div>
-          <h6 className="font-bold">第二阶段：Fab 教育与实验室落地</h6>
+    
+          <h6 className="font-bold"><a href="https://www.nexmaker.com/" >第二阶段：Fab 教育与实验室落地</a></h6>
           <ul className="list-disc pl-6">
             <li>通过 NexMaker Academy 提供一体化课程体系</li>
             <li>在高校开展 Hackathon，培养实践能力</li>
@@ -41,7 +44,8 @@ const AboutUs = () => {
         </div>
 
         <div>
-          <h6 className="font-bold">第三阶段：数字制造</h6>
+          
+          <h6 className="font-bold"><a href="https://www.profabx.com/" >第三阶段：数字制造</a></h6>
           <ul className="list-disc pl-6">
             <li>设计与生产优化建议</li>
             <li>样品生产与测试</li>
@@ -51,7 +55,8 @@ const AboutUs = () => {
         </div>
 
         <div>
-          <h6 className="font-bold">第四阶段：汽车场景实验室</h6>
+          
+          <h6 className="font-bold"><a href="https://www.henosv.com/" >第四阶段：汽车场景实验</a></h6>
           <p>
             从童年梦想到智能小车，从结构联调到六自由度智能座舱，ProFabX 始终致力于探索智能交通未来。
           </p>
