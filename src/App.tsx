@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Modeling from "./pages/Modeling";
 import Guide from "./pages/guide";
@@ -13,7 +13,7 @@ import "./App.css";
 
 function App() {
   return (
-    <Router >
+    <Router>
       {/* ✅ 让 Navbar 适用于所有页面 */}
       <Navbar />
       <div className="w-full overflow-x-hidden"> {/* 添加这个包装div */}

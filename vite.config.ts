@@ -2,7 +2,8 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
 export default defineConfig({
-  base: '/',  // 确保 base 为根路径
+  base: '/',  // 如果部署到根域名，保持为 '/'
+  // 如果部署到子路径，改为 '/HenOSV-cp/'
   build: {
     outDir: 'docs',  // 输出到 docs 目录
     emptyOutDir: true,  // 构建前清空目录
