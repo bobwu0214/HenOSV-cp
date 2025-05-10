@@ -8,6 +8,7 @@ import Kit from "./pages/kit";
 import HenOSV from "./pages/henosv";
 import Simulator from "./pages/simulator";
 import SimulatorLab from "./pages/simulatorlab";
+import Aboutus from "./pages/aboutus";
 import "./App.css";
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
           <Route path="/henosv" element={<HenOSV />} />
           <Route path="/simulator" element={<Simulator />} />
           <Route path="/simulatorlab" element={<SimulatorLab />} />
+          <Route path="/aboutus" element={<Aboutus/>} />
         </Routes>
       </div>
     </Router>
