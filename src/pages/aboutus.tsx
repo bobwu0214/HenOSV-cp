@@ -13,7 +13,7 @@ const AboutUs = () => {
 
       <ul className="list-disc pl-6 space-y-2">
         <li><a href="https://henosv.com/modeling">车辆参数化生成工具</a>：使用threejs/vue结合Autodesk APS/Autodesk fusion 360 API等前后端技术，实现简洁高效的设计工作，从而推动设计项目快速迭代。</li>
-        <li><a href="https://henosv.com/kit">智能小车教育套件</a>：小车分为底盘和功能平台。</li>
+        <li><a href="https://henosv.com/kit">智能小车教育套件</a>：小车分为底盘和功能平台</li>
         <li><a href="https://henosv.com/simulatorlab">仿真套件</a>：通过新能源汽车动力的总成仿真实验室进行车辆的在环检查和相关实验。</li>
         <li><a href="https://henosv.com/henosv">滑板底盘</a>：结合参数化工具和FabLab中心快速实现开发和加工，高效定制车辆。</li>
         <li><a href="https://henosv.com/simulator">交通工具模拟器</a>：用于科研端无人驾驶、人机交互等实验。</li>
