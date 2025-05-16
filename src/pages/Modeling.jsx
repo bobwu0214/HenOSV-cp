@@ -54,7 +54,7 @@ export default function App() {
   return (
     <>
       <Canvas
-        camera={{ position: [-300, 550, 450], fov: 45, near: 0.1, far: 10000 }}
+        camera={{ position: [-330, 315, 305], fov: 45, near: 0.1, far: 10000 }}
         style={{ width: '100vw', height: '100vh' }}
       >
         <ambientLight intensity={1} />
